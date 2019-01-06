@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/brandAddText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="107dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Brand"
+        app:layout_constraintEnd_toEndOf="@+id/modelAddText"
+        app:layout_constraintStart_toStartOf="@+id/modelAddText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/modelAddText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Model"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brandAddText" />
+
+    <Button
+        android:id="@+id/finishAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="@+id/backToMainFromAddButton"
+        app:layout_constraintEnd_toStartOf="@+id/backToMainFromAddButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backToMainFromAddButton" />
+
+    <Button
+        android:id="@+id/backToMainFromAddButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="116dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/finishAddButton" />
+</android.support.constraint.ConstraintLayout>

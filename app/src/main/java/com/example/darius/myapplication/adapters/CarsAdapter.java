@@ -18,6 +18,7 @@ import java.util.List;
 
 public class CarsAdapter extends ArrayAdapter<Car> {
     private MainActivity parent;
+
     public CarsAdapter(Context context, List<Car> cars) {
         super(context, 0, cars);
         this.parent = (MainActivity) context;
@@ -36,9 +37,12 @@ public class CarsAdapter extends ArrayAdapter<Car> {
         Button deleteButton = convertView.findViewById(R.id.deleteButton);
         Button updateButton = convertView.findViewById(R.id.updateButton);
         addDeleteHandler(deleteButton, car.getId());
-        addUpdateHandler(updateButton);
+        addUpdateHandler(updateButton, convertView);
         brand.setText(car.getBrand());
         model.setText(car.getModel());
+        id.setText(car.getId());
+        brand.setEnabled(false);
+        model.setEnabled(false);
 
         return convertView;
     }
@@ -55,6 +59,15 @@ public class CarsAdapter extends ArrayAdapter<Car> {
         });
     }
 
-    private void addUpdateHandler(Button button) {
+    private void addUpdateHandler(Button button, final View convertView) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = ((TextView) convertView.findViewById(R.id.idTextView)).getText().toString();
+                String oldBrand = ((TextView) convertView.findViewById(R.id.brand)).getText().toString();
+                String oldModel = ((TextView) convertView.findViewById(R.id.model)).getText().toString();
+                parent.initEditCarView(id, oldBrand, oldModel);
+            }
+        });
     }
 }

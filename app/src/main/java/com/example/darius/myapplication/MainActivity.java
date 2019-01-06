@@ -72,6 +72,44 @@ public class MainActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.invalidCredentialsView)).setVisibility(TextView.INVISIBLE);
     }
 
+    public void initEditCarView(String id, String oldBrand, String oldModel) {
+        setContentView(R.layout.car_edit);
+        ((EditText) findViewById(R.id.newBrandText)).setText(oldBrand);
+        ((EditText) findViewById(R.id.newModelText)).setText(oldModel);
+        addFinishEditButtonListener(id);
+        addBackFromEditButtonListener();
+    }
+
+    private void addFinishEditButtonListener(final String id) {
+        Button finishEditButton = findViewById(R.id.executeUpdateButton);
+        final MainActivity self = this;
+        finishEditButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+                String brand = ((EditText) findViewById(R.id.newBrandText)).getText().toString();
+                String model = ((EditText) findViewById(R.id.newModelText)).getText().toString();
+                String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+                database.child("car").child(id).removeValue();
+                String id = database.push().getKey();
+                Car car = new Car(id, brand, model, email);
+                database.child("car").child(id).setValue(car);
+                self.initMainView();
+            }
+        });
+    }
+
+    private void addBackFromEditButtonListener() {
+        Button backButton = findViewById(R.id.backToMainFromEdit);
+        final MainActivity self = this;
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                self.initMainView();
+            }
+        });
+    }
+
     private void initAddView() {
         setContentView(R.layout.add);
         addBackFromAddButtonListener();

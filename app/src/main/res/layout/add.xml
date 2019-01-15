@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/brandAddText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="107dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Brand"
+        android:typeface="serif"
+
         app:layout_constraintEnd_toEndOf="@+id/modelAddText"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/modelAddText"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,37 +26,44 @@
         android:id="@+id/modelAddText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginLeft="47dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Model"
+        android:typeface="serif"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/brandAddText" />
 
     <Button
         android:id="@+id/finishAddButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
+        android:layout_width="133dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="68dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginEnd="109dp"
+        android:layout_marginEnd="68dp"
         android:layout_marginRight="109dp"
         android:text="Add"
+        android:typeface="serif"
+        android:background = "@drawable/oundedbutton"
         app:layout_constraintBottom_toBottomOf="@+id/backToMainFromAddButton"
         app:layout_constraintEnd_toStartOf="@+id/backToMainFromAddButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backToMainFromAddButton" />
+        app:layout_constraintTop_toTopOf="@+id/backToMainFromAddButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/backToMainFromAddButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="64dp"
         android:text="Back"
+        android:typeface="serif"
+        android:background = "@drawable/oundedbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/finishAddButton" />

@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.mihnea.myapplication.adapters.MainActivity">
 
     <EditText
         android:id="@+id/passwordfield"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
+        android:layout_width="259dp"
+        android:layout_height="68dp"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginBottom="207dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="password"
+        android:text="123456"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userfield"
@@ -23,13 +24,16 @@
 
     <EditText
         android:id="@+id/userfield"
-        android:layout_width="244dp"
-        android:layout_height="0dp"
+        android:layout_width="257dp"
+        android:layout_height="77dp"
         android:layout_marginTop="173dp"
         android:layout_marginBottom="75dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="user"
+        android:text="wx.mihnea@yahoo.com"
+        android:textStyle="italic"
+        android:typeface="serif"
+
         app:layout_constraintBottom_toTopOf="@+id/invalidCredentialsView"
         app:layout_constraintEnd_toEndOf="@+id/passwordfield"
         app:layout_constraintHorizontal_bias="0.0"
@@ -38,12 +42,15 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="51dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="8dp"
-        android:text="Cars"
-        android:textSize="20sp"
+        android:text="Phone"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:typeface="serif"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -53,21 +60,27 @@
 
     <Button
         android:id="@+id/loginbutton"
-        android:layout_width="84dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
+        android:layout_width="201dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:text="Login"
+        android:typeface="serif"
+
+        android:background = "@drawable/oundedbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/passwordfield"
-        app:layout_constraintTop_toBottomOf="@+id/userfield" />
+        app:layout_constraintTop_toBottomOf="@+id/userfield"
+        app:layout_constraintVertical_bias="0.707" />
 
     <TextView
         android:id="@+id/invalidCredentialsView"
-        android:layout_width="wrap_content"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="25dp"
         android:layout_marginBottom="150dp"
-        android:text="Invalid credentials!"
+        android:text="Invalid Username or Password!"
+        android:typeface="serif"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"

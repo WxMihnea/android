@@ -3,32 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
 
     <Button
         android:id="@+id/logoutbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="52dp"
         android:text="Logout"
+        android:typeface="serif"
+        android:background = "@drawable/oundedbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carListView" />
+        app:layout_constraintTop_toBottomOf="@+id/PhoneListView" />
 
     <Button
-        android:id="@+id/addCarButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
+        android:id="@+id/addPhoneButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginRight="172dp"
         android:text="Add"
+        android:typeface="serif"
+        android:background = "@drawable/oundedbutton"
         app:layout_constraintBaseline_toBaselineOf="@+id/logoutbutton"
         app:layout_constraintEnd_toStartOf="@+id/logoutbutton" />
 
     <ListView
-        android:id="@+id/carListView"
+        android:id="@+id/PhoneListView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

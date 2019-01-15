@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "275420483832",
-    "firebase_url": "https://android-proj-mobile.firebaseio.com",
-    "project_id": "android-proj-mobile",
-    "storage_bucket": "android-proj-mobile.appspot.com"
+    "project_number": "944392065129",
+    "firebase_url": "https://mobileandro-e497b.firebaseio.com",
+    "project_id": "mobileandro-e497b",
+    "storage_bucket": "mobileandro-e497b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:275420483832:android:b4abcfd6223f7914",
+        "mobilesdk_app_id": "1:944392065129:android:5ca6da6722ca022b",
         "android_client_info": {
-          "package_name": "com.example.darius.myapplication"
+          "package_name": "com.example.mihnea.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "275420483832-cnhra20p0a9rqeis7devf3lm3818d3fa.apps.googleusercontent.com",
+          "client_id": "944392065129-67ds6pm3a73f9crrf6tl85118mjsib6l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBVGE0wPYGpKYO1H-F3gExdUo401X4O6HY"
+          "current_key": "AIzaSyDqd9CBfUnJmohlVB0SE0MqdMQZIIyr8oM"
         }
       ],
       "services": {
